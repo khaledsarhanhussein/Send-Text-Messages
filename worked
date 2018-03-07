@@ -1,0 +1,16 @@
+
+from twilio.rest import Client
+
+# Your Account SID from twilio.com/console
+account_sid = "AC702f30e52bd3f7b9a8962e9bd45a23f4"
+# Your Auth Token from twilio.com/console
+auth_token  = "2d7ba32c9fc345fd145da368a5d10306"
+
+client = Client(account_sid, auth_token)
+
+message = client.messages.create(
+    to="+2001129820198", 
+    from_="+14243532455",
+    body="eh ")
+
+print(message.sid)
